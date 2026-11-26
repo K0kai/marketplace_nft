@@ -71,7 +71,7 @@ function Receipt({ order }: { order: Order }) {
         <h2 className="text-xs font-bold">Detalhes da transação</h2>
         <div
           aria-hidden="true"
-          className="border-line-strong/60 mt-2 grid grid-cols-[1fr_64px_88px] gap-3 border-b pb-2 text-xs font-bold"
+          className="border-line-strong/60 mt-2 grid grid-cols-[1fr_52px_72px] gap-3 border-b pb-2 text-xs font-bold sm:grid-cols-[1fr_64px_88px]"
         >
           <span>NFTs</span>
           <span className="text-center">Edições</span>
@@ -87,15 +87,15 @@ function Receipt({ order }: { order: Order }) {
                 className="w-13 shrink-0 rounded-[6px]"
               />
               <span className="min-w-0 flex-1">
-                <span className="block truncate text-xs font-bold">{line.name}</span>
+                <span className="block text-xs font-bold break-words">{line.name}</span>
                 <span className="text-subtle block text-[11px]">
                   ID do token: #{line.tokenId} · {EDITION_LABELS[line.editionId]}
                 </span>
               </span>
-              <span className="text-muted-foreground w-16 text-center text-xs">
+              <span className="text-muted-foreground w-13 text-center text-xs sm:w-16">
                 (x {line.quantity})
               </span>
-              <Price value={line.lineTotal} className="w-[88px] justify-end text-sm" />
+              <Price value={line.lineTotal} className="w-18 justify-end text-sm sm:w-[88px]" />
             </li>
           ))}
         </ul>

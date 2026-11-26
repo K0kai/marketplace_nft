@@ -37,7 +37,7 @@ export function OrderSummary({
               className="w-14 shrink-0 rounded-[6px]"
             />
             <span className="min-w-0 flex-1">
-              <span className="block truncate text-xs font-bold">{item.name}</span>
+              <span className="block text-xs font-bold break-words">{item.name}</span>
               <span className="text-subtle block text-[11px]">
                 ID do token: #{item.tokenId} · {EDITION_LABELS[item.editionId]}
               </span>

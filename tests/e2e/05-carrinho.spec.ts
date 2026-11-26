@@ -52,3 +52,32 @@ test('quantidade, cupom, persistência e preservação do carrinho no login', as
     .click()
   await expect(app.heading('Seu carrinho está vazio')).toBeVisible()
 })
+
+// nas larguras intermediárias o resumo já espremeu a lista e sumiu com o nome
+for (const width of [768, 1024, 1440]) {
+  test(`itens legíveis e sem sobreposição em ${width}px`, async ({ app, page, isMobile }) => {
+    test.skip(isMobile, 'a largura é definida pelo próprio teste')
+    await page.setViewportSize({ width, height: 900 })
+    await app.addToCart(EMERALD)
+
+    const item = page.getByRole('region', { name: 'Itens no carrinho' }).getByRole('listitem')
+    const name = item.getByRole('heading', { name: 'Emerald Ape #042' })
+    await expect(name).toBeVisible()
+
+    const problems = await item.evaluate((row) => {
+      const cells = [...row.children]
+        .map((cell) => ({ cell, box: cell.getBoundingClientRect() }))
+        .filter(({ box }) => box.width > 0)
+      const overflowing = cells
+        .filter(({ cell }) => cell.scrollWidth > cell.clientWidth + 1)
+        .map(({ cell }) => `estoura: ${cell.textContent}`)
+      const overlapping = cells
+        .slice(1)
+        .filter(({ box }, i) => box.left < cells[i]!.box.right - 1)
+        .map(({ cell }) => `sobrepõe: ${cell.textContent}`)
+      return [...overflowing, ...overlapping]
+    })
+    expect(problems).toEqual([])
+    expect((await name.boundingBox())!.width).toBeGreaterThan(100)
+  })
+}

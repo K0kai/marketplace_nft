@@ -20,7 +20,7 @@ export function CartLine({ item }: { item: CartItem }) {
   const name = `${item.name}, edição ${EDITION_LABELS[item.editionId]}`
 
   return (
-    <li className="bg-card grid grid-cols-[96px_minmax(0,1fr)_auto] items-center gap-x-3 overflow-hidden rounded-[18px] pr-3 md:grid-cols-[70px_minmax(0,2fr)_1fr_1fr_1fr_40px] md:rounded-none">
+    <li className="bg-card grid grid-cols-[96px_minmax(0,1fr)_auto] items-center gap-x-3 overflow-hidden rounded-[18px] pr-3 md:grid-cols-[70px_minmax(0,2fr)_1fr_minmax(100px,1fr)_1fr_40px] md:rounded-none">
       <NftImage
         artwork={item.artwork}
         alt=""
@@ -29,7 +29,7 @@ export function CartLine({ item }: { item: CartItem }) {
       />
 
       <div className="min-w-0 py-2 md:py-0">
-        <h3 className="text-sm leading-tight font-bold md:truncate">
+        <h3 className="text-sm leading-tight font-bold">
           <Link
             to="/nft/$nftId"
             params={{ nftId: item.nftId }}

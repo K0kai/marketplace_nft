@@ -13,7 +13,7 @@ import { CouponForm } from './coupon-form'
 import { OrderTotals, TotalsSkeleton } from './order-totals'
 import { useCart, useQuote } from './queries'
 
-const COLUMNS = 'grid-cols-[70px_minmax(0,2fr)_1fr_1fr_1fr_40px] gap-x-3'
+const COLUMNS = 'grid-cols-[70px_minmax(0,2fr)_1fr_minmax(100px,1fr)_1fr_40px] gap-x-3'
 
 function Summary() {
   const cart = useCart()
@@ -24,7 +24,7 @@ function Summary() {
   return (
     <section
       aria-labelledby="summary-title"
-      className="max-md:bg-card h-fit max-md:-mx-4 max-md:mt-6 max-md:self-end max-md:rounded-t-[28px] max-md:p-6"
+      className="max-md:bg-card h-fit max-md:-mx-4 max-md:mt-6 max-md:self-end max-md:rounded-t-[28px] max-md:p-6 md:max-lg:w-full md:max-lg:max-w-sm md:max-lg:justify-self-end"
     >
       <h2
         id="summary-title"
@@ -94,7 +94,7 @@ export function CartPage() {
         <CartNotices />
 
         {cart.isPending ? (
-          <Loading label="Carregando carrinho" className="grid gap-12 md:grid-cols-[1fr_320px]">
+          <Loading label="Carregando carrinho" className="grid gap-12 lg:grid-cols-[1fr_320px]">
             <div className="flex flex-col gap-3">
               {Array.from({ length: 3 }, (_, i) => (
                 <Skeleton key={i} className="h-24 md:h-[70px]" />
@@ -119,7 +119,7 @@ export function CartPage() {
             </Button>
           </EmptyState>
         ) : (
-          <div className="grid grid-cols-[minmax(0,1fr)] gap-6 max-md:flex-1 max-md:grid-rows-[auto_1fr] md:grid-cols-[minmax(0,1fr)_300px] lg:grid-cols-[minmax(0,1fr)_332px] lg:gap-24">
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-6 max-md:flex-1 max-md:grid-rows-[auto_1fr] lg:grid-cols-[minmax(0,1fr)_332px] lg:gap-8 xl:gap-24">
             <section aria-labelledby="items-title" className="min-w-0">
               <h2 id="items-title" className="sr-only">
                 Itens no carrinho

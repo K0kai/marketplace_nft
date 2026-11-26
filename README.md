@@ -163,7 +163,8 @@ pnpm test:report
 O Playwright gera o build e sobe o preview sozinho. Fora de CI, ele reaproveita um servidor que
 já esteja na porta 4173: **encerre previews antigos** para não testar um build desatualizado.
 
-São 48 testes E2E em cada um dos dois projetos (desktop 1440×900 e mobile 390×844):
+São 51 testes E2E em cada um dos dois projetos (desktop 1440×900 e mobile 390×844). Três deles
+conferem o carrinho em 768, 1024 e 1440 px e rodam só no projeto desktop:
 
 | Arquivo                    | Cobre                                                                                      |
 | -------------------------- | ------------------------------------------------------------------------------------------ |
@@ -171,7 +172,7 @@ São 48 testes E2E em cada um dos dois projetos (desktop 1440×900 e mobile 390�
 | `02-detalhe`               | acesso direto, inexistente, edição esgotada, limite                                        |
 | `03-sessao`                | cadastro, login, expiração (relógio e checkout), logout, troca de usuário, 403             |
 | `04-favoritos`             | persistência, falha com rollback                                                           |
-| `05-carrinho`              | quantidade, remoção, cupom, refresh e login                                                |
+| `05-carrinho`              | quantidade, remoção, cupom, refresh, login e larguras intermediárias                       |
 | `06-compra`                | do catálogo ao recibo                                                                      |
 | `07-falhas-pagamento`      | recusa, cliques repetidos, timeout, idempotência, carteira                                 |
 | `08-conta`                 | perfil, avatar, senha, carteiras                                                           |
