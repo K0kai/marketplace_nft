@@ -5,12 +5,16 @@ import { createRoot } from 'react-dom/client'
 import { queryClient } from './app/query-client'
 import { router } from './app/router'
 import { startSessionLifecycle } from './app/session-lifecycle'
-import { setNetworkReady } from './lib/network-gate'
+import { setNetworkGate } from './lib/network-gate'
 import './index.css'
 
 if (import.meta.env.VITE_ENABLE_MOCKS === 'true') {
   // carregado à parte: a interface pinta antes, e as requisições esperam o worker
-  setNetworkReady(import('./mocks/browser').then((mocks) => mocks.startMockServer()))
+  const started = import('./mocks/browser').then(async (mocks) => {
+    await mocks.startMockServer()
+    return mocks
+  })
+  setNetworkGate(() => started.then((mocks) => mocks.ensureMockActive()))
 }
 
 startSessionLifecycle()

@@ -1,8 +1,8 @@
-// A interface renderiza na hora; requisições e socket esperam a rede (o MSW, na demo) ficar pronta.
-let ready: Promise<unknown> = Promise.resolve()
+// A interface renderiza na hora; cada chamada espera a rede (o MSW, na demo) estar pronta.
+let gate: () => Promise<unknown> = () => Promise.resolve()
 
-export function setNetworkReady(promise: Promise<unknown>) {
-  ready = promise
+export function setNetworkGate(next: () => Promise<unknown>) {
+  gate = next
 }
 
-export const whenNetworkReady = () => ready
+export const whenNetworkReady = () => gate()

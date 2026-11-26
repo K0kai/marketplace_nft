@@ -1,4 +1,4 @@
-import { expect, test } from '../support/fixtures'
+import { expect, test, USERS } from '../support/fixtures'
 
 test('skeletons durante a lentidão, sem salto de layout quando o conteúdo chega', async ({
   page,
@@ -56,4 +56,30 @@ test('erro 500 no detalhe tem nova tentativa', async ({ app, page }) => {
   await app.mock('scenario', { name: 'default' })
   await retry.click()
   await expect(app.heading('Emerald Ape #042')).toBeVisible()
+})
+
+test('o mock continua respondendo depois que o navegador encerra o Service Worker', async ({
+  app,
+  page,
+}) => {
+  await page.goto('/login')
+  // no celular o login não chama a API ao abrir: espera o mock responder (sem ele, viria o HTML)
+  await expect
+    .poll(() =>
+      page.evaluate(async () =>
+        (await fetch('/__mock/state')).headers.get('content-type')?.includes('json'),
+      ),
+    )
+    .toBe(true)
+
+  // é o que o navegador faz com um worker ocioso, por exemplo numa aba em segundo plano
+  const devtools = await page.context().newCDPSession(page)
+  await devtools.send('ServiceWorker.enable')
+  await devtools.send('ServiceWorker.stopAllWorkers')
+
+  const login = page.waitForResponse((response) => response.url().endsWith('/api/auth/login'))
+  await app.submitLogin(USERS.nova)
+
+  expect((await login).status()).toBe(200)
+  await expect(page).toHaveURL('/')
 })

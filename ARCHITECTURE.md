@@ -174,6 +174,10 @@ quando a API devolve `confirmed`. O recibo vem do retrato gravado no pedido.
 - Determinismo: fixtures e latência variável usam seed fixa; gatilhos como "o preço muda no
   primeiro envio" disparam uma única vez.
 - A interface aparece de imediato; requisições e socket esperam `whenNetworkReady()`.
+- O navegador pode encerrar um Service Worker ocioso. O worker do MSW guarda só na memória quais
+  abas atende; quando volta, deixa as requisições irem para a rede (na Vercel, o login recebia 405). Por isso `whenNetworkReady()` reenvia `MOCK_ACTIVATE` e espera a confirmação, por no máximo
+  1 s, antes de cada chamada. A mensagem é interna do MSW: revise ao atualizar a biblioteca. Um
+  teste E2E encerra o worker e confere que o login continua funcionando.
 
 ### Transporte do tempo real
 
