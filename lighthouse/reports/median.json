@@ -1,6 +1,6 @@
 {
   "environment": {
-    "Data": "2026-11-26T19:30:49.907Z",
+    "Data": "2026-11-26T20:00:32.088Z",
     "Lighthouse": "13.6.0",
     "Navegador": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.0.0 Safari/537.36",
     "Node": "v24.15.0",
@@ -16,57 +16,57 @@
       "page": "inicio",
       "profile": "mobile",
       "scores": {
-        "performance": 94,
+        "performance": 93,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 2701.4700000000003,
+      "lcp": 2718.498,
       "cls": 0.01328869062742121,
-      "tbt": 166.00000000000023,
+      "tbt": 198.5,
       "failed": [
         "performance: Largest Contentful Paint (2.7 s)"
       ],
       "runs": [
         {
           "scores": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 2720.173,
+          "cls": 0.01328869062742121,
+          "tbt": 205.99999999999977,
+          "failed": [
+            "performance: Largest Contentful Paint (2.7 s)",
+            "performance: Total Blocking Time (210 ms)"
+          ]
+        },
+        {
+          "scores": {
             "performance": 94,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 2696.369,
+          "lcp": 2718.498,
           "cls": 0.01328869062742121,
-          "tbt": 156,
+          "tbt": 189,
           "failed": [
             "performance: Largest Contentful Paint (2.7 s)"
           ]
         },
         {
           "scores": {
-            "performance": 91,
+            "performance": 93,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 2730.264,
+          "lcp": 2711.337,
           "cls": 0.01328869062742121,
-          "tbt": 253,
-          "failed": [
-            "performance: Largest Contentful Paint (2.7 s)",
-            "performance: Total Blocking Time (250 ms)"
-          ]
-        },
-        {
-          "scores": {
-            "performance": 94,
-            "accessibility": 100,
-            "best-practices": 100,
-            "seo": 100
-          },
-          "lcp": 2701.4700000000003,
-          "cls": 0.01328869062742121,
-          "tbt": 166.00000000000023,
+          "tbt": 198.5,
           "failed": [
             "performance: Largest Contentful Paint (2.7 s)"
           ]
@@ -82,7 +82,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 582.67,
+      "lcp": 578.394,
       "cls": 0,
       "tbt": 0,
       "failed": [],
@@ -94,7 +94,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 583.244,
+          "lcp": 578.394,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -106,7 +106,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 573.107,
+          "lcp": 587.2470000000001,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -118,7 +118,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 582.67,
+          "lcp": 577.1279999999999,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -129,32 +129,18 @@
       "page": "detalhe",
       "profile": "mobile",
       "scores": {
-        "performance": 95,
+        "performance": 96,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 2516.865,
+      "lcp": 2514.837,
       "cls": 0,
-      "tbt": 159,
+      "tbt": 142.5,
       "failed": [
         "performance: Largest Contentful Paint (2.5 s)"
       ],
       "runs": [
-        {
-          "scores": {
-            "performance": 95,
-            "accessibility": 100,
-            "best-practices": 100,
-            "seo": 100
-          },
-          "lcp": 2509.15,
-          "cls": 0,
-          "tbt": 159,
-          "failed": [
-            "performance: Largest Contentful Paint (2.5 s)"
-          ]
-        },
         {
           "scores": {
             "performance": 96,
@@ -162,9 +148,9 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 2523.691,
+          "lcp": 2519.0370000000003,
           "cls": 0,
-          "tbt": 122.49999999999977,
+          "tbt": 113.00000000000023,
           "failed": [
             "performance: Largest Contentful Paint (2.5 s)"
           ]
@@ -176,9 +162,23 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 2516.865,
+          "lcp": 2514.837,
           "cls": 0,
-          "tbt": 189.99999999999977,
+          "tbt": 192.5,
+          "failed": [
+            "performance: Largest Contentful Paint (2.5 s)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 96,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 2513.547,
+          "cls": 0,
+          "tbt": 142.5,
           "failed": [
             "performance: Largest Contentful Paint (2.5 s)"
           ]
@@ -194,7 +194,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 536.242,
+      "lcp": 536.456,
       "cls": 0,
       "tbt": 0,
       "failed": [],
@@ -206,7 +206,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 536.242,
+          "lcp": 536.456,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -218,7 +218,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 529.567,
+          "lcp": 538.619,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -230,7 +230,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 539.39,
+          "lcp": 536.029,
           "cls": 0,
           "tbt": 0,
           "failed": []

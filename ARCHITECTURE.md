@@ -255,8 +255,8 @@ Primeira medição → depois das otimizações, no preview local: início mobil
 
 | Performance (mediana) | Preview local | Publicado (Vercel) |
 | --------------------- | ------------- | ------------------ |
-| Início, mobile        | 85            | 94                 |
-| Detalhe, mobile       | 88            | 95                 |
+| Início, mobile        | 85            | 93                 |
+| Detalhe, mobile       | 88            | 96                 |
 | Início, desktop       | 99            | 100                |
 | Detalhe, desktop      | 100           | 100                |
 
