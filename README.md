@@ -4,8 +4,8 @@ Marketplace de NFTs em React + TypeScript: descoberta, compra e área do colecio
 no celular. **API, autenticação, carteiras, pagamentos e blockchain são simulados** no navegador
 com MSW; o tempo real passa pelo `socket.io-client`.
 
-- Repositório: _preencher após publicar_
-- Demonstração: _preencher após o deploy_
+- Repositório: https://github.com/K0kai/marketplace_nft
+- Demonstração: https://kurio-marketplace-nft-six.vercel.app
 - Arquitetura, limitações e desvios do Figma: [`ARCHITECTURE.md`](ARCHITECTURE.md)
 - Contratos REST e eventos: [`docs/CONTRACTS.md`](docs/CONTRACTS.md)
 
@@ -200,8 +200,9 @@ Encerre qualquer servidor na porta 4173 antes da medição local. A configuraç�
 `lighthouse/config.mjs`; o resumo, com ambiente, LCP, CLS e TBT, em
 [`lighthouse/summary.md`](lighthouse/summary.md); os relatórios, em `lighthouse/reports/`.
 
-A performance no mobile ficou abaixo da meta de 90. As causas estão em
-[`ARCHITECTURE.md`](ARCHITECTURE.md#meta-não-atingida-performance-no-mobile-meta-90).
+Os relatórios versionados são da versão publicada, que atinge todas as metas. No preview local, a
+performance no mobile fica abaixo de 90. A comparação está em
+[`ARCHITECTURE.md`](ARCHITECTURE.md#local-x-publicado).
 
 ## Deploy (Vercel)
 

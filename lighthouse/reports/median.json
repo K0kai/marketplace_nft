@@ -1,6 +1,6 @@
 {
   "environment": {
-    "Data": "2026-11-26T18:42:15.316Z",
+    "Data": "2026-11-26T19:30:49.907Z",
     "Lighthouse": "13.6.0",
     "Navegador": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.0.0 Safari/537.36",
     "Node": "v24.15.0",
@@ -8,69 +8,67 @@
     "Sistema": "Windows_NT 10.0.26200 (x64)",
     "CPU": "AMD Ryzen 5 5600X 6-Core Processor x12",
     "Memória": "32 GB",
-    "Alvo": "http://localhost:4173",
-    "Condições": "build de produção servido por `vite preview` local (gzip), mocks no cenário default, cache vazio, throttling simulado padrão do Lighthouse"
+    "Alvo": "https://kurio-marketplace-nft-six.vercel.app",
+    "Condições": "versão publicada, mocks no cenário default, cache vazio, throttling simulado padrão do Lighthouse"
   },
   "results": [
     {
       "page": "inicio",
       "profile": "mobile",
       "scores": {
-        "performance": 85,
+        "performance": 94,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 3737.228800000001,
-      "cls": 0,
-      "tbt": 230.5,
+      "lcp": 2701.4700000000003,
+      "cls": 0.01328869062742121,
+      "tbt": 166.00000000000023,
       "failed": [
-        "performance: Largest Contentful Paint (3.7 s)",
-        "performance: Total Blocking Time (230 ms)"
+        "performance: Largest Contentful Paint (2.7 s)"
       ],
       "runs": [
         {
           "scores": {
-            "performance": 86,
+            "performance": 94,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 3808.7330000000006,
-          "cls": 0,
-          "tbt": 184,
-          "failed": [
-            "performance: Largest Contentful Paint (3.8 s)"
-          ]
-        },
-        {
-          "scores": {
-            "performance": 84,
-            "accessibility": 100,
-            "best-practices": 100,
-            "seo": 100
-          },
-          "lcp": 3737.228800000001,
-          "cls": 0,
-          "tbt": 259,
-          "failed": [
-            "performance: Largest Contentful Paint (3.7 s)",
-            "performance: Total Blocking Time (260 ms)"
-          ]
-        },
-        {
-          "scores": {
-            "performance": 85,
-            "accessibility": 100,
-            "best-practices": 100,
-            "seo": 100
-          },
-          "lcp": 3733.331599999999,
+          "lcp": 2696.369,
           "cls": 0.01328869062742121,
-          "tbt": 230.5,
+          "tbt": 156,
           "failed": [
-            "performance: Largest Contentful Paint (3.7 s)",
-            "performance: Total Blocking Time (230 ms)"
+            "performance: Largest Contentful Paint (2.7 s)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 91,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 2730.264,
+          "cls": 0.01328869062742121,
+          "tbt": 253,
+          "failed": [
+            "performance: Largest Contentful Paint (2.7 s)",
+            "performance: Total Blocking Time (250 ms)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 94,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 2701.4700000000003,
+          "cls": 0.01328869062742121,
+          "tbt": 166.00000000000023,
+          "failed": [
+            "performance: Largest Contentful Paint (2.7 s)"
           ]
         }
       ]
@@ -79,48 +77,48 @@
       "page": "inicio",
       "profile": "desktop",
       "scores": {
-        "performance": 99,
+        "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 836.6595000000002,
+      "lcp": 582.67,
       "cls": 0,
       "tbt": 0,
       "failed": [],
       "runs": [
         {
           "scores": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 836.6595000000002,
+          "lcp": 583.244,
           "cls": 0,
           "tbt": 0,
           "failed": []
         },
         {
           "scores": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 838.1296000000001,
+          "lcp": 573.107,
           "cls": 0,
           "tbt": 0,
           "failed": []
         },
         {
           "scores": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 831.1211000000002,
+          "lcp": 582.67,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -131,58 +129,58 @@
       "page": "detalhe",
       "profile": "mobile",
       "scores": {
-        "performance": 88,
+        "performance": 95,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 3601.777250000001,
+      "lcp": 2516.865,
       "cls": 0,
-      "tbt": 167.99999999999955,
+      "tbt": 159,
       "failed": [
-        "performance: Largest Contentful Paint (3.6 s)"
+        "performance: Largest Contentful Paint (2.5 s)"
       ],
       "runs": [
         {
           "scores": {
-            "performance": 88,
+            "performance": 95,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 3601.777250000001,
+          "lcp": 2509.15,
           "cls": 0,
-          "tbt": 139,
+          "tbt": 159,
           "failed": [
-            "performance: Largest Contentful Paint (3.6 s)"
+            "performance: Largest Contentful Paint (2.5 s)"
           ]
         },
         {
           "scores": {
-            "performance": 88,
+            "performance": 96,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 3596.1797500000002,
+          "lcp": 2523.691,
           "cls": 0,
-          "tbt": 167.99999999999955,
+          "tbt": 122.49999999999977,
           "failed": [
-            "performance: Largest Contentful Paint (3.6 s)"
+            "performance: Largest Contentful Paint (2.5 s)"
           ]
         },
         {
           "scores": {
-            "performance": 87,
+            "performance": 94,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 3676.1227500000005,
+          "lcp": 2516.865,
           "cls": 0,
-          "tbt": 190.5,
+          "tbt": 189.99999999999977,
           "failed": [
-            "performance: Largest Contentful Paint (3.7 s)"
+            "performance: Largest Contentful Paint (2.5 s)"
           ]
         }
       ]
@@ -196,7 +194,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcp": 787.86925,
+      "lcp": 536.242,
       "cls": 0,
       "tbt": 0,
       "failed": [],
@@ -208,7 +206,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 789.5525,
+          "lcp": 536.242,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -220,7 +218,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 787.2600000000002,
+          "lcp": 529.567,
           "cls": 0,
           "tbt": 0,
           "failed": []
@@ -232,7 +230,7 @@
             "best-practices": 100,
             "seo": 100
           },
-          "lcp": 787.86925,
+          "lcp": 539.39,
           "cls": 0,
           "tbt": 0,
           "failed": []

@@ -228,8 +228,9 @@ a hierarquia.
 
 ## Desempenho
 
-Medições e ambiente em [`lighthouse/summary.md`](lighthouse/summary.md); relatórios HTML e JSON
-em `lighthouse/reports/`.
+Medições da versão publicada e ambiente em [`lighthouse/summary.md`](lighthouse/summary.md);
+relatórios HTML e JSON em `lighthouse/reports/`. Todas as metas foram atingidas nas duas páginas e
+nos dois perfis.
 
 ### Otimizações feitas (valem para todos os builds)
 
@@ -243,28 +244,32 @@ em `lighthouse/reports/`.
 | `sizes` fazia o celular baixar a imagem de 640 px nos cards                                                       | `sizes` corrigido                                                              |
 | CLS de 0,127 no detalhe (rodapé empurrado)                                                                        | skeleton ocupa a altura da tela                                                |
 
-Primeira medição → medição final: início mobile 78 → 85; detalhe mobile 80 → 88; detalhe desktop
-94 → 100; CLS do detalhe desktop 0,127 → 0,000.
+Primeira medição → depois das otimizações, no preview local: início mobile 78 → 85; detalhe mobile
+80 → 88; detalhe desktop 94 → 100; CLS do detalhe desktop 0,127 → 0,000.
 
-### Meta não atingida: performance no mobile (meta 90)
+### Local x publicado
 
-As demais metas foram atingidas nas duas páginas e nos dois perfis.
+| Performance (mediana) | Preview local | Publicado (Vercel) |
+| --------------------- | ------------- | ------------------ |
+| Início, mobile        | 85            | 94                 |
+| Detalhe, mobile       | 88            | 95                 |
+| Início, desktop       | 99            | 100                |
+| Detalhe, desktop      | 100           | 100                |
 
-- **O que reprova:** LCP de cerca de 3,7 s (simulação de 4G lento e CPU 4× mais lenta). CLS está
-  dentro do bom; o TBT varia entre execuções (cerca de 140 a 260 ms).
-- **Causa:** o elemento LCP é a imagem de um NFT, que só pode ser pedida depois de: baixar e
-  executar o JavaScript (React, Router, Query, Axios, Zod, Socket.IO e telas), iniciar o Service
-  Worker do MSW e receber a resposta da API, que no cenário padrão tem 120 ms de latência. São
-  cerca de 340 kB transferidos até o LCP.
-- **Particularidade da demonstração:** o "backend" roda no navegador. O download do mock e o
-  processamento das respostas disputam banda e CPU com a interface. Com um backend real esse custo
-  sairia do cliente. O ganho disso **não foi medido**.
-- **Próximos passos possíveis:** renderização no servidor ou pré-renderização com os dados
-  iniciais (muda a arquitetura pedida); `zod/mini` nos contratos; carregar diálogos sob demanda.
+- No preview local, a performance no mobile **não atinge a meta de 90**, com LCP de cerca de 3,7 s.
+  No site publicado, o LCP no mobile ficou entre 2,5 e 2,7 s.
+- O volume transferido é praticamente o mesmo, e os dois comprimem os arquivos. Uma diferença
+  observada é o protocolo: HTTP/2 na Vercel e HTTP/1.1 no preview. É a **causa provável**, mas não
+  foi testada isoladamente.
+- **O que ainda limita o LCP no mobile** (2,7 s no início, pouco acima da faixa considerada boa, de
+  até 2,5 s): a imagem de um NFT só pode ser pedida depois de baixar e executar o JavaScript,
+  iniciar o Service Worker do MSW e receber a resposta da API, que no cenário padrão tem 120 ms de
+  latência. Como o "backend" roda no navegador, o mock disputa CPU com a interface.
+- **Próximos passos possíveis:** renderização no servidor ou pré-renderização com os dados iniciais
+  (muda a arquitetura pedida); `zod/mini` nos contratos; carregar diálogos sob demanda.
 - **Não foi feito** nenhum atalho só para auditoria: mesmas imagens, fontes, mocks e
   funcionalidades.
-- O `vite preview` local usa gzip. A hospedagem pode usar compressão melhor; meça a versão
-  publicada com `LIGHTHOUSE_URL=https://… pnpm lighthouse`.
+- Os relatórios do preview local estão no histórico do Git (commit `10c2595`).
 
 ## Decisões de UX
 
