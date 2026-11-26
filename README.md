@@ -229,3 +229,8 @@ src/
 tests/          unit/, e2e/, visual/, support/
 lighthouse/     configuração, script e relatórios
 ```
+
+## Licença
+
+Todos os direitos reservados. O código pode ser acessado e executado apenas para avaliar a
+candidatura. Veja [LICENSE](LICENSE), que também trata dos materiais de terceiros e do desafio.
