@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Tokens medidos direto nos PNGs exportados do Figma. */
+:root {
+  color-scheme: dark;
+  --background: #140d0a;
+  --foreground: #f5f1eb;
+  --card: #241612;
+  --card-foreground: #f5f1eb;
+  --popover: #241612;
+  --popover-foreground: #f5f1eb;
+  --primary: #d28a4c;
+  --primary-foreground: #140d0a;
+  --secondary: #2f1d15;
+  --secondary-foreground: #f5f1eb;
+  --muted: #2f1d15;
+  --muted-foreground: #cfb28c;
+  --accent: #2f1d15;
+  --accent-foreground: #f5f1eb;
+  --destructive: #f0805f;
+  --border: #3f2319;
+  /* ajuste de acessibilidade: a borda do layout (#3f2319) não chega a 3:1 em campos */
+  --input: #87593d;
+  --ring: #e89b55;
+  --highlight: #e89b55;
+  --subtle: #b39463;
+  --band: #38220f;
+  --line-strong: #8a5b33;
+  --radius: 0.375rem;
+}
+
+@theme inline {
+  --font-sans: 'Roboto Mono', 'Roboto Mono Fallback', ui-monospace, monospace;
+  --font-mono: var(--font-sans);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-highlight: var(--highlight);
+  --color-subtle: var(--subtle);
+  --color-band: var(--band);
+  --color-line-strong: var(--line-strong);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/fonts/roboto-mono-latin.woff2') format('woff2');
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+/* fallback monoespaçado com a mesma largura: evita deslocamento quando a fonte chega */
+@font-face {
+  font-family: 'Roboto Mono Fallback';
+  src: local('Consolas'), local('Menlo'), local('Courier New');
+  size-adjust: 109%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  /* foco visível em tudo que recebe teclado */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']) {
+    cursor: pointer;
+  }
+}
+
+@utility page-container {
+  width: 100%;
+  /* 1200px de conteúdo (medida do layout) mais as margens laterais */
+  max-width: calc(1200px + 3rem);
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* degradê dos botões "pill" do layout mobile */
+@utility gradient-pill {
+  background-image: linear-gradient(90deg, #d28a4c, #b47541);
+}
+
+@utility shimmer {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--secondary);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(255 226 196 / 9%), transparent);
+    animation: shimmer 1.4s infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::after {
+      animation: none;
+      display: none;
+    }
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

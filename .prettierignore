@@ -1,0 +1,9 @@
+dist
+pnpm-lock.yaml
+public/mockServiceWorker.js
+src/routeTree.gen.ts
+lighthouse/reports
+lighthouse/summary.md
+playwright-report
+test-results
+docs/GUIA-PASSO-A-PASSO.md

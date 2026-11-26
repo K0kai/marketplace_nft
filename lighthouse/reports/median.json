@@ -1,0 +1,243 @@
+{
+  "environment": {
+    "Data": "2026-11-26T18:42:15.316Z",
+    "Lighthouse": "13.6.0",
+    "Navegador": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.0.0 Safari/537.36",
+    "Node": "v24.15.0",
+    "Vite": "8.3.8",
+    "Sistema": "Windows_NT 10.0.26200 (x64)",
+    "CPU": "AMD Ryzen 5 5600X 6-Core Processor x12",
+    "Memória": "32 GB",
+    "Alvo": "http://localhost:4173",
+    "Condições": "build de produção servido por `vite preview` local (gzip), mocks no cenário default, cache vazio, throttling simulado padrão do Lighthouse"
+  },
+  "results": [
+    {
+      "page": "inicio",
+      "profile": "mobile",
+      "scores": {
+        "performance": 85,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3737.228800000001,
+      "cls": 0,
+      "tbt": 230.5,
+      "failed": [
+        "performance: Largest Contentful Paint (3.7 s)",
+        "performance: Total Blocking Time (230 ms)"
+      ],
+      "runs": [
+        {
+          "scores": {
+            "performance": 86,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3808.7330000000006,
+          "cls": 0,
+          "tbt": 184,
+          "failed": [
+            "performance: Largest Contentful Paint (3.8 s)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 84,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3737.228800000001,
+          "cls": 0,
+          "tbt": 259,
+          "failed": [
+            "performance: Largest Contentful Paint (3.7 s)",
+            "performance: Total Blocking Time (260 ms)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 85,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3733.331599999999,
+          "cls": 0.01328869062742121,
+          "tbt": 230.5,
+          "failed": [
+            "performance: Largest Contentful Paint (3.7 s)",
+            "performance: Total Blocking Time (230 ms)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 836.6595000000002,
+      "cls": 0,
+      "tbt": 0,
+      "failed": [],
+      "runs": [
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 836.6595000000002,
+          "cls": 0,
+          "tbt": 0,
+          "failed": []
+        },
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 838.1296000000001,
+          "cls": 0,
+          "tbt": 0,
+          "failed": []
+        },
+        {
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 831.1211000000002,
+          "cls": 0,
+          "tbt": 0,
+          "failed": []
+        }
+      ]
+    },
+    {
+      "page": "detalhe",
+      "profile": "mobile",
+      "scores": {
+        "performance": 88,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3601.777250000001,
+      "cls": 0,
+      "tbt": 167.99999999999955,
+      "failed": [
+        "performance: Largest Contentful Paint (3.6 s)"
+      ],
+      "runs": [
+        {
+          "scores": {
+            "performance": 88,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3601.777250000001,
+          "cls": 0,
+          "tbt": 139,
+          "failed": [
+            "performance: Largest Contentful Paint (3.6 s)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 88,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3596.1797500000002,
+          "cls": 0,
+          "tbt": 167.99999999999955,
+          "failed": [
+            "performance: Largest Contentful Paint (3.6 s)"
+          ]
+        },
+        {
+          "scores": {
+            "performance": 87,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 3676.1227500000005,
+          "cls": 0,
+          "tbt": 190.5,
+          "failed": [
+            "performance: Largest Contentful Paint (3.7 s)"
+          ]
+        }
+      ]
+    },
+    {
+      "page": "detalhe",
+      "profile": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 787.86925,
+      "cls": 0,
+      "tbt": 0,
+      "failed": [],
+      "runs": [
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 789.5525,
+          "cls": 0,
+          "tbt": 0,
+          "failed": []
+        },
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 787.2600000000002,
+          "cls": 0,
+          "tbt": 0,
+          "failed": []
+        },
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lcp": 787.86925,
+          "cls": 0,
+          "tbt": 0,
+          "failed": []
+        }
+      ]
+    }
+  ]
+}
